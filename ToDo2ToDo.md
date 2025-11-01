@@ -9,6 +9,7 @@ albo maila albo sms albo whatupa czy cos
 - dokonczyc endpointy zeby naprawde dzialaly
 - dodac moze prroity  mapowanie tskow jak wazny tkory jest etc, zeby aplikacja rosla
 execption handling
+- wprowadzic recordy z javy
 
 testy + testy integracyjne
 dac jakis payload do testow

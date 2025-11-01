@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.kodz.todo.api.IAuth;
 import pl.kodz.todo.authentication.AuthenticationService;
 import pl.kodz.todo.model.request.UserDto;
+import pl.kodz.todo.model.request.UserLogInDto;
 import pl.kodz.todo.model.response.AuthResponse;
 
 @RestController
@@ -21,5 +22,11 @@ public class AuthController  implements IAuth {
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody UserDto user) {
         return ResponseEntity.ok(authService.register(user));
+    }
+
+    @Override
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(UserLogInDto user) {
+        return ResponseEntity.ok(authService.login(user));
     }
 }
