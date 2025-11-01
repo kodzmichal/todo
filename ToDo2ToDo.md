@@ -5,12 +5,9 @@ albo maila albo sms albo whatupa czy cos
 
 
 ->>>>>>>>>>>>>>>>>>>>>>>>>> walidacja dancych i liqubase plus pakiet poprawic i role
-JWT autentykacja
-
-application properties.
-docker
-bazka + docker compose
-liqubase
+-.. logowanie i logout 
+- dokonczyc endpointy zeby naprawde dzialaly
+- dodac moze prroity  mapowanie tskow jak wazny tkory jest etc, zeby aplikacja rosla
 execption handling
 
 testy + testy integracyjne
