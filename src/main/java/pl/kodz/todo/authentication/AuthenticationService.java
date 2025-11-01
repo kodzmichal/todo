@@ -5,6 +5,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.kodz.todo.model.request.UserDto;
 import pl.kodz.todo.model.response.AuthResponse;
+import pl.kodz.todo.model.technical.CustomUserDetails;
 import pl.kodz.todo.modeldata.User;
 import pl.kodz.todo.repository.UserRepository;
 
@@ -26,7 +27,7 @@ public class AuthenticationService {
 
         userRepository.save(user);
 
-        String token = jwtService.generateToken(user);
+        String token = jwtService.generateToken(new CustomUserDetails(user));
 
         return new AuthResponse(token);
     }

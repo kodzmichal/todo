@@ -3,6 +3,8 @@ upgrade liqubase sturcture
 moze intergacja z jakisms api np facbooka ze chce przypomninia z todo listy wysylac na messengera
 albo maila albo sms albo whatupa czy cos
 
+
+->>>>>>>>>>>>>>>>>>>>>>>>>> walidacja dancych i liqubase plus pakiet poprawic i role
 JWT autentykacja
 
 application properties.
