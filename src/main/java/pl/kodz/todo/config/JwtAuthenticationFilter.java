@@ -57,10 +57,21 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(authToken);
                 }
             }
+            filterChain.doFilter(request, response);
         } catch (MalformedJwtException ex) {
-            throw new JwtException("Invalid JWT token", ex);
+            extracted(response, ex);
+        } catch (JwtException ex) {
+            extracted(response, ex);
         }
 
-        filterChain.doFilter(request, response);
+
+    }
+
+    private static void extracted(HttpServletResponse response, JwtException ex) throws IOException {
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        response.setContentType("application/json");
+        response.getWriter().write(
+                "{\"status\":401,\"error\":\"Unauthorized\",\"message\":\"" + ex.getMessage() + "\"}"
+        );
     }
 }

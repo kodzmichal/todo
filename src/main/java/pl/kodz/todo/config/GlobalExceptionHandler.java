@@ -27,10 +27,4 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(JwtException.class)
-    public ResponseEntity<ApiException> handleJwtException(JwtException ex) {
-        ApiException error = new ApiException(401, ex.getMessage());
-
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
-    }
 }
