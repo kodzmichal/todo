@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.kodz.todo.api.IToDoList;
-import pl.kodz.todo.model.CreateToDoListDto;
+import pl.kodz.todo.model.request.CreateToDoListDto;
 import pl.kodz.todo.modeldata.ToDoList;
 import pl.kodz.todo.repository.ToDoListRepository;
 

@@ -1,7 +1,8 @@
-package pl.kodz.todo.model;
+package pl.kodz.todo.model.response;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pl.kodz.todo.model.request.ToDoDto;
 
 import java.util.Set;
 

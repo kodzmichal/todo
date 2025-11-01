@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.kodz.todo.api.IToDo;
-import pl.kodz.todo.model.ToDoDto;
+import pl.kodz.todo.model.request.ToDoDto;
 
 @RestController
 public class ToDoController implements IToDo {

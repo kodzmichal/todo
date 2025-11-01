@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: ../update/001-update-to_do_list.sql
+      relativeToChangelogFile: true

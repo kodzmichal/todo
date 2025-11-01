@@ -1,11 +1,11 @@
-package pl.kodz.todo.model;
+package pl.kodz.todo.model.request;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class ToDoDto {
+public class CreateToDoListDto {
+    private String creator;
     private String title;
-    private String description;
 }
