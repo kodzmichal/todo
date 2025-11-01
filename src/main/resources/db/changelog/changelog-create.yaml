@@ -2,3 +2,6 @@ databaseChangeLog:
   - include:
       file: ../create/001-create-to_do_list.sql
       relativeToChangelogFile: true
+  - include:
+      file: ../create/002-create-user.sql
+      relativeToChangelogFile: true

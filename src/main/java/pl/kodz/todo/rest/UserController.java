@@ -30,6 +30,7 @@ public class UserController implements IUser {
         response.setEmail(user.get().getEmail());
         response.setFirstName(user.get().getFirstName());
         response.setLastName(user.get().getLastName());
+        response.setEnabled(user.get().isEnabled());
 
         return  ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
