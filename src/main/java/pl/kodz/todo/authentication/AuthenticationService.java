@@ -1,7 +1,7 @@
 package pl.kodz.todo.authentication;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -10,10 +10,10 @@ import pl.kodz.todo.model.request.UserDto;
 import pl.kodz.todo.model.request.UserLogInDto;
 import pl.kodz.todo.model.response.AuthResponse;
 import pl.kodz.todo.model.technical.CustomUserDetails;
+import pl.kodz.todo.model.technical.exception.DataProcessingException;
+import pl.kodz.todo.model.technical.exception.UserAlreadyExistsException;
 import pl.kodz.todo.modeldata.User;
 import pl.kodz.todo.repository.UserRepository;
-
-import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 
@@ -34,11 +34,16 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .build();
 
-        userRepository.save(user);
-
-        String token = jwtService.generateToken(new CustomUserDetails(user));
-
-        return new AuthResponse(token);
+        try {
+            userRepository.save(user);
+            String token = jwtService.generateToken(new CustomUserDetails(user));
+            return new AuthResponse(token);
+        } catch (DataIntegrityViolationException ex){
+            if (ex.getMostSpecificCause().getMessage().contains("users_email_key")) {
+                throw new UserAlreadyExistsException("email");
+            }
+            throw new DataProcessingException(ex);
+        }
     }
 
     public AuthResponse login(UserLogInDto request) {
