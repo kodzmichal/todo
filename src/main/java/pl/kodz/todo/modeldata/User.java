@@ -27,6 +27,8 @@ public class User {
     private String lastName;
     private String password;
     private boolean enabled;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
