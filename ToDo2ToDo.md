@@ -10,9 +10,9 @@ walidacja dancyh na wstepnie
 - 
 - dodac moze prroity  mapowanie tskow jak wazny tkory jest etc, zeby aplikacja rosla
 
-- 
+- nazwy pakietow poprawic
 - wprowadzic recordy z javy
-
+move from layer-based package structure to Feature-based
 testy + testy integracyjne
 dac jakis payload do testow
 kafka i przez nia jakies notyfikacje?

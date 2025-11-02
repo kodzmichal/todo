@@ -8,4 +8,5 @@ import pl.kodz.todo.model.technical.CustomUserDetails;
 public interface IUser {
     ResponseEntity<UserDtoResponse> getUserById(Long id);
     ResponseEntity<UserDtoResponse> getUserMe(CustomUserDetails userDetails);
+    ResponseEntity<Void> removeUserById(Long id);
 }
