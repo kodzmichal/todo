@@ -1,13 +1,15 @@
 package pl.kodz.todo.api.user;
 
+import org.springframework.stereotype.Component;
 import pl.kodz.todo.api.user.dto.CreateUserDto;
 import pl.kodz.todo.api.user.dto.UpdateUserDto;
 import pl.kodz.todo.api.user.dto.UserDtoResponse;
 import pl.kodz.todo.domain.model.user.User;
 
-public  class UserApiMapper {
+@Component
+public class UserApiMapper {
 
-    public static User updateDomain(CreateUserDto dto){
+    public User updateDomain(CreateUserDto dto){
         User user = new User();
         user.setRole(dto.getRole());
         user.setPassword(dto.getPassword());
@@ -33,8 +35,8 @@ public  class UserApiMapper {
 
     public User updateDomain(User user, UpdateUserDto updateUserDto) {
         user.setEmail(updateUserDto.email());
-        user.setFirstName(user.getFirstName());
-        user.setLastName(user.getLastName());
+        user.setFirstName(updateUserDto.firstName());
+        user.setLastName(updateUserDto.lastName());
 
         return user;
     }

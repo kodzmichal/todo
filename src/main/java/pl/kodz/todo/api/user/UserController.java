@@ -22,7 +22,7 @@ public class UserController {
     @GetMapping("/users/me")
     public ResponseEntity<UserDtoResponse> getUserMe(@AuthenticationPrincipal CustomUserDetails userDetail) {
         UserDtoResponse user = userService.findUserById(userDetail.getUserId());
-        return ResponseEntity.status(HttpStatus.CREATED).body(user);
+        return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 
     @PatchMapping("/users/me/password")

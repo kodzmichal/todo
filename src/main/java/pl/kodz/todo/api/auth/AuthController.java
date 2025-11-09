@@ -16,10 +16,11 @@ import pl.kodz.todo.api.user.dto.CreateUserDto;
 @RequiredArgsConstructor
 public class AuthController {
     private final AuthenticationService authService;
+    private final UserApiMapper userApiMapper;
 
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@Valid @RequestBody CreateUserDto user) {
-        return ResponseEntity.ok(authService.register(UserApiMapper.updateDomain(user)));
+        return ResponseEntity.ok(authService.register(userApiMapper.updateDomain(user)));
     }
 
     @PostMapping("/login")
