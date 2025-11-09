@@ -2,13 +2,12 @@ package pl.kodz.todo.infrastructure.api;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.server.ResponseStatusException;
-import pl.kodz.todo.api.dto.ApiException;
+import pl.kodz.todo.infrastructure.api.dto.ApiException;
 import pl.kodz.todo.infrastructure.security.exception.DataProcessingException;
 import pl.kodz.todo.infrastructure.security.exception.UserAlreadyExistsException;
 

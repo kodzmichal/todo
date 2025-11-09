@@ -1,4 +1,4 @@
-package pl.kodz.todo.api.dto;
+package pl.kodz.todo.infrastructure.api.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
