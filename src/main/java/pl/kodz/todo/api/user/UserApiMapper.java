@@ -1,5 +1,8 @@
 package pl.kodz.todo.api.user;
 
+import pl.kodz.todo.api.user.dto.CreateUserDto;
+import pl.kodz.todo.api.user.dto.UpdateUserDto;
+import pl.kodz.todo.api.user.dto.UserDtoResponse;
 import pl.kodz.todo.domain.model.user.User;
 
 public  class UserApiMapper {

@@ -6,10 +6,10 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import pl.kodz.todo.api.user.ChangePasswordDto;
-import pl.kodz.todo.api.user.UpdateUserDto;
+import pl.kodz.todo.api.user.dto.ChangePasswordDto;
+import pl.kodz.todo.api.user.dto.UpdateUserDto;
 import pl.kodz.todo.api.user.UserApiMapper;
-import pl.kodz.todo.api.user.UserDtoResponse;
+import pl.kodz.todo.api.user.dto.UserDtoResponse;
 import pl.kodz.todo.domain.model.user.User;
 import pl.kodz.todo.domain.model.user.port.UserRepository;
 

@@ -27,14 +27,11 @@ public class AuthenticationService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
+    private final UserFactory userFactory ;
     public AuthResponse register(User domainUser) {
-        Optional<User> existingUser = userRepository.findByEmail(domainUser.getEmail());
-        if (existingUser.isPresent()) {
-            //add to handler
-            throw new UserAlreadyExistsException("email");
-        }
+        userRepository.findByEmail(domainUser.getEmail())
+                .ifPresent(u -> { throw new UserAlreadyExistsException("email"); });
 
-        UserFactory userFactory = new UserFactory();
         User user = userFactory.create(domainUser, passwordEncoder);
 
         try {

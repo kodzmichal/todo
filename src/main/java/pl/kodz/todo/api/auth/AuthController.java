@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.kodz.todo.api.user.UserApiMapper;
 import pl.kodz.todo.application.auth.AuthenticationService;
-import pl.kodz.todo.api.user.CreateUserDto;
+import pl.kodz.todo.api.user.dto.CreateUserDto;
 
 @RestController
 @RequestMapping("/auth")

@@ -69,5 +69,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(UNAUTHORIZED)
                 .body(error);
     }
-
 }
