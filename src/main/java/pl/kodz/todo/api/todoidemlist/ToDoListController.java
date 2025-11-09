@@ -1,4 +1,4 @@
-package pl.kodz.todo.api;
+package pl.kodz.todo.api.todoidemlist;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -7,7 +7,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pl.kodz.todo.api.dto.request.CreateToDoListDto;
+import pl.kodz.todo.api.todoidemlist.CreateToDoListDto;
 import pl.kodz.todo.infrastructure.authentication.CustomUserDetails;
 import pl.kodz.todo.infrastructure.persistance.entity.ToDoList;
 import pl.kodz.todo.repository.ToDoListRepository;

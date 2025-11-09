@@ -1,8 +1,8 @@
-package pl.kodz.todo.api.dto.response;
+package pl.kodz.todo.api.todoidemlist;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.kodz.todo.api.dto.request.ToDoDto;
+import pl.kodz.todo.api.todoitem.ToDoDto;
 
 import java.util.Set;
 

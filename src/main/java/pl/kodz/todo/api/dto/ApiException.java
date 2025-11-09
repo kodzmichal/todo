@@ -1,4 +1,4 @@
-package pl.kodz.todo.infrastructure.security.exception;
+package pl.kodz.todo.api.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class ApiException {
+    //TODO make it standard exception
     private int status;
     private String message;
     private long timestamp;

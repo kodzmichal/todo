@@ -1,4 +1,4 @@
-package pl.kodz.todo.api.dto.response;
+package pl.kodz.todo.api.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

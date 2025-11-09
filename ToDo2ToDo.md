@@ -21,3 +21,18 @@ s3 (aws) sqs sns ses?
 
 dodanie loggera
 add profiles for 
+health check
+////
+
+user controller 
+update method put/patch lacznei z nullem chce zeby np adres skasowac
+przy create sprwadzic czy sa pola ktore nie sa persystowane ..
+zastanowic sie czy np cos wrzocic do usera domenowego np ze nie moze zmienic zdresu jesli nie jest aktywny
+
+dodac adnotacje walidacyjne 
+dodac priroryty do taskow - pozniej sortowanie etc pozniej daty kiedy co ma byc robione zeby np notyfikacje 
+
+...
+szybkie
+wersjonowanie dodac - easy
+TODO niektore sa szybkie mozna przejrzec

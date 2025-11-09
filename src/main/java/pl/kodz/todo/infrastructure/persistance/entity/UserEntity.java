@@ -31,9 +31,11 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    //TODO better annotations
     @CreationTimestamp
     private LocalDateTime createdAt;
 
+    //TODO better annotations
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 }
