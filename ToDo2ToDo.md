@@ -3,11 +3,8 @@ DODAC contrainta na realacje w taklist
 struktora katalogow liqubase - zeby zachowac kolejnosc i struktore poprawna i odporna na zmiane np kreacja przez wpisem danych
 
 
-walidacja dancyh na wstepnie
-->>>>>>>>>>>>>>>>>>>>>>>>>> walidacja dancych i role
-- 
 - dodac moze prroity  mapowanie tskow jak wazny tkory jest etc, zeby aplikacja rosla
--LOGIKA DOMENOWA  DO encji cos dodac zeby bylo paare rzeczy!
+-LOGIKA DOMENOWA  DDO encji cos dodac zeby bylo paare rzeczy!
 - nazwy pakietow poprawic
 - wprowadzic recordy z javy
 move from layer-based package structure to Feature-based
@@ -32,13 +29,13 @@ szybkie
 
 EXception handler poprawic pod standard
 TODO niektore sa szybkie mozna przejrzec
-Osobną baza danych na prostą zamiast docker compose.
-Liqubade kontekst plus dane testowe
+
 Dzięki czemu dwa nowe tematy ogarnę tanim kosztem
 HATEOS
 
-przerobic liqubase na 'nie' sql 
-wprowadzic init schema
+przerobic liqubase na 'nie' sql
+Osobną baza danych na prostą zamiast docker compose.
+Liqubade kontekst plus dane testowe
 
 ---------------------------------------------------------------
 pomysly na rozbudowe poza core

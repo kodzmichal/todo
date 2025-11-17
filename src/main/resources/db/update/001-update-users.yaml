@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: update_001
+      author: mkodz
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: role
+                  type: VARCHAR(20)
+                  defaultValue: USER
+                  constraints:
+                    nullable: false
