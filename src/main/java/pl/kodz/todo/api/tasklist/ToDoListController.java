@@ -1,5 +1,6 @@
 package pl.kodz.todo.api.tasklist;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class ToDoListController {
     private final TaskListService taskListService;
 
     @PostMapping("/create")
-    public ResponseEntity<TaskListResponseDto> createList(@AuthenticationPrincipal CustomUserDetails userDetails, @RequestBody CreateTaskListDto list){
+    public ResponseEntity<TaskListResponseDto> createList(@AuthenticationPrincipal CustomUserDetails userDetails, @Valid  @RequestBody CreateTaskListDto list){
 
         taskListService.createList(userDetails, list);
 

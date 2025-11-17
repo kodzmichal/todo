@@ -7,7 +7,7 @@ walidacja dancyh na wstepnie
 ->>>>>>>>>>>>>>>>>>>>>>>>>> walidacja dancych i role
 - 
 - dodac moze prroity  mapowanie tskow jak wazny tkory jest etc, zeby aplikacja rosla
-
+-LOGIKA DOMENOWA  DO encji cos dodac zeby bylo paare rzeczy!
 - nazwy pakietow poprawic
 - wprowadzic recordy z javy
 move from layer-based package structure to Feature-based
@@ -29,7 +29,7 @@ dodac priroryty do taskow - pozniej sortowanie etc pozniej daty kiedy co ma byc 
 
 ...
 szybkie
-wersjonowanie dodac - easy
+
 EXception handler poprawic pod standard
 TODO niektore sa szybkie mozna przejrzec
 Osobną baza danych na prostą zamiast docker compose.
@@ -40,7 +40,7 @@ HATEOS
 przerobic liqubase na 'nie' sql 
 wprowadzic init schema
 
-
+---------------------------------------------------------------
 pomysly na rozbudowe poza core
 kafka->notification serwis  -> s3 (aws) sqs sns ses?
 s3
