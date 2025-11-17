@@ -1,4 +1,4 @@
-package pl.kodz.todo.api.auth;
+package pl.kodz.todo.api.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;
 

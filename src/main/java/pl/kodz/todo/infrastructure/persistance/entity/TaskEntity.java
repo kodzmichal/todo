@@ -3,7 +3,7 @@ package pl.kodz.todo.infrastructure.persistance.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class ToDo {
+public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -12,6 +12,6 @@ public class ToDo {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "list_id")
-    private ToDoList list;
+    @JoinColumn(name = "task_list_id")
+    private TaskListEntity list;
 }

@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class ToDoDto {
+public class TaskDto {
     private String title;
     private String description;
 }

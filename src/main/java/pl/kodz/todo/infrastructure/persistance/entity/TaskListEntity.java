@@ -10,14 +10,17 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ToDoList {
+@Table(name = "task_list")
+public class TaskListEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,8 +33,10 @@ public class ToDoList {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    Long creator;
+    @ManyToOne
+    @JoinColumn(name = "creator_id", nullable = false)
+    UserEntity creator;
 
     @OneToMany(mappedBy = "list", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ToDo> toDos = new ArrayList<>();
+    private Set<TaskEntity> taskEntities = new HashSet<>();
 }

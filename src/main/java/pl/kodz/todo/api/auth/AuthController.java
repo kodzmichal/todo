@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pl.kodz.todo.api.auth.dto.UserLogInDto;
 import pl.kodz.todo.api.user.UserApiMapper;
 import pl.kodz.todo.application.auth.AuthenticationService;
 import pl.kodz.todo.api.user.dto.CreateUserDto;

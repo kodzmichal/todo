@@ -1,7 +1,8 @@
 databaseChangeLog:
-  - include:
-      file: ../update/001-update-to_do_list.sql
-      relativeToChangelogFile: true
-  - include:
-      file: ../update/002-update-users.sql
-      relativeToChangelogFile: true
+  - changeSet:
+        id: 002
+        author: mkodz
+        changes:
+          - sqlFile:
+              path: ../update/001-update-users.sql
+              relativeToChangelogFile: true

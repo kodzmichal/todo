@@ -7,7 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import pl.kodz.todo.api.auth.AuthResponse;
-import pl.kodz.todo.api.auth.UserLogInDto;
+import pl.kodz.todo.api.auth.dto.UserLogInDto;
 import pl.kodz.todo.application.user.UserFactory;
 import pl.kodz.todo.domain.model.user.User;
 import pl.kodz.todo.domain.model.user.port.UserRepository;
@@ -15,8 +15,6 @@ import pl.kodz.todo.infrastructure.authentication.CustomUserDetails;
 import pl.kodz.todo.infrastructure.authentication.JwtService;
 import pl.kodz.todo.infrastructure.security.exception.DataProcessingException;
 import pl.kodz.todo.infrastructure.security.exception.UserAlreadyExistsException;
-
-import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 

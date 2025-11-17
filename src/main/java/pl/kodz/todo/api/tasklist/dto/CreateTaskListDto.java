@@ -1,11 +1,10 @@
-package pl.kodz.todo.api.todoidemlist;
+package pl.kodz.todo.api.tasklist.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class CreateToDoListDto {
-    private String creator;
+public class CreateTaskListDto {
     private String title;
 }

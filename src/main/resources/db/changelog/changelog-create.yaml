@@ -1,7 +1,15 @@
 databaseChangeLog:
-  - include:
-      file: ../create/001-create-to_do_list.sql
-      relativeToChangelogFile: true
-  - include:
-      file: ../create/002-create-user.sql
-      relativeToChangelogFile: true
+  - changeSet:
+      id: 001
+      author: mkodz
+      changes:
+        - sqlFile:
+            path: ../create/001-create-task_list.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 002
+      author: mkodz
+      changes:
+        - sqlFile:
+            path: ../create/002-create-user.sql
+            relativeToChangelogFile: true

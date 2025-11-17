@@ -1,1 +1,0 @@
-ALTER TABLE to_do_list ADD creator VARCHAR(255);
