@@ -13,7 +13,7 @@ import pl.kodz.todo.application.auth.AuthenticationService;
 import pl.kodz.todo.api.user.dto.CreateUserDto;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/v1/auth")
 @RequiredArgsConstructor
 public class AuthController {
     private final AuthenticationService authService;

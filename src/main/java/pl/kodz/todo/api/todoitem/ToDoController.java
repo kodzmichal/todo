@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ToDoController {
-    @PostMapping("/{listId}/todos")
+    @PostMapping("/v1/{listId}/todos")
     public ResponseEntity<Void> createToDo(@PathVariable Long listId, @RequestBody TaskDto todo) {
 
         System.out.println("Dodaję ToDo do listy: " + listId + " -> " + todo.getTitle());

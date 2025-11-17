@@ -11,7 +11,7 @@ import pl.kodz.todo.api.user.dto.UserDtoResponse;
 import pl.kodz.todo.application.user.UserService;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/v1/admin")
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMIN')")
 public class UserAdminController {
